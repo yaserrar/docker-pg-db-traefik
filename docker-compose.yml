@@ -40,7 +40,7 @@ services:
     labels:
       - traefik.enable=true
       - traefik.docker.network=network
-      - traefik.http.routers.minio.rule=Host(`minio.${DOMAIN_NAME}`) || Host(`minio.${DOMAIN_NAME_2}`|| Host(`minio.${DOMAIN_NAME_3}`)
+      - traefik.http.routers.minio.rule=Host(`minio.${DOMAIN_NAME}`) || Host(`minio.${DOMAIN_NAME_2}`) || Host(`minio.${DOMAIN_NAME_3}`)
       - traefik.http.routers.minio.entrypoints=websecure
       - traefik.http.routers.minio.tls.certresolver=letsencryptresolver
       - traefik.http.services.minio.loadbalancer.server.port=80
